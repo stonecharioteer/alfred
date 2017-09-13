@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Alfred</title>
+        <script>
+        function showTime() {
+            var today = new Date();
+            document.getElementById("date").innerHTML =  today.toDateString();
+            document.getElementById("time").innerHTML = today.toTimeString();
+            var t = setTimeout(showTime, 500);
+        }
+        </script>
+
+        <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
+        
+        <style>
+            body {
+                background-color: black;
+                font-family: 'Share Tech Mono', monospace;
+                font-size: 84px;
+                margin-top: 15%;
+                text-align: center;
+                color: #f44336; 
+            }
+            #date {
+                color: #2196f3;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body onload="showTime()">
+        <p id="date"></p>
+        <p id="time"></p>
+    </body>
+</html>
